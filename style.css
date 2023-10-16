@@ -1,0 +1,377 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;1,900&display=swap');
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    }
+
+.container{ /* блок для выравнивая содержимого */
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+h1, h2, h3 {
+    margin: 0;
+}
+
+.card{
+  position:relative;
+  left: 50px;
+  color: #646464;
+}
+
+.card1{
+  color: #646464;
+  font-size: 24px;
+}
+
+/* шапка */
+
+header{
+    background-color: #c6c6c6;
+    height: 12vh;
+    display: flex;
+    align-items: center;
+    padding-left: 2%;
+}
+
+.logo{
+    width: 60px;
+}
+
+/* бургер-меню */
+        /* скрываем чекбокс */
+        #menu__toggle {
+            opacity: 0;
+          }
+          /* стилизуем кнопку */
+          .menu__btn {
+            display: flex; /* используем flex для центрирования содержимого */
+            align-items: center;  /* центрируем содержимое кнопки */
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            width: 26px;
+            height: 26px;
+            z-index: 2;
+          }
+          /* добавляем "гамбургер" */
+          .menu__btn > span,
+          .menu__btn > span::before,
+          .menu__btn > span::after {
+            display: block;
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            background-color: #101010;
+          }
+          .menu__btn > span::before {
+            content: '';
+            top: -8px;
+          }
+          .menu__btn > span::after {
+            content: '';
+            top: 8px;
+          }
+          /* контейнер меню */
+          .menu__box {
+            display: block;
+            position: fixed;
+            visibility: hidden;
+            top: 0;
+            right: -100%;
+            width: 20%;
+            height: 100%;
+            margin: 0;
+            padding: 80px 0;
+            list-style: none;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 1;
+          }
+          /* элементы меню */
+          .menu__item {
+            display: block;
+            padding: 12px 24px;
+            color: white;              
+            text-decoration: none;
+          }
+          .menu__item:hover {
+            background-color: #1b1b1b;
+          }
+          #menu__toggle:checked ~ .menu__btn > span {
+            transform: rotate(45deg);
+          }
+          #menu__toggle:checked ~ .menu__btn > span::before {
+            top: 0;
+            transform: rotate(0);
+          }
+          #menu__toggle:checked ~ .menu__btn > span::after {
+            top: 0;
+            transform: rotate(90deg);
+          }
+          #menu__toggle:checked ~ .menu__box {
+            visibility: visible;
+            right: 0;
+          }
+
+/* главный экран */
+
+.sale{
+    width: 100%;
+    height: 80vh;
+    box-sizing: border-box;
+    background: url(images/background.jpg);
+    background-size: cover;
+    padding-top: 25vh;
+}
+
+h1 {
+    color: rgb(0, 0, 0);
+    font-size: 48px;
+}
+
+h2 {
+    color: #fff;
+    font-size: 24px;
+    margin-top: 20px;
+}
+
+/* колонки с текстом */
+
+.textInner{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.column{
+    width: 25%;
+}
+
+/*регистрация*/
+
+* {box-sizing: border-box}
+
+  input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+button:hover {
+  opacity:1;
+}
+
+.cancelbtn {
+  padding: 14px 20px;
+  background-color: #f44336;
+}
+
+.cancelbtn, .signupbtn {
+  float: left;
+  width: 50%;
+}
+
+.container2 {
+  padding: 16px;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+@media screen and (max-width: 300px) {
+  .cancelbtn, .signupbtn {
+    width: 100%;
+  }
+}
+/* подвал */
+
+footer{
+    width: 100%;
+    background-color: #c6c6c6;
+    color: #505250;
+    font-size: 14px;
+    padding-top: 18px;
+    padding-bottom: 20px;
+    text-align: center;
+    margin: auto;
+}
+
+.footerInner{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 5px;
+}
+
+.footerA{
+    color: #505250;
+    text-decoration: none;
+}
+
+.fast{
+  background-color:#c6c6c6;
+  color:#505250;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 150px;
+  opacity: 0.9;
+}
+
+.casd{
+  position: absolute;
+  top: 700px;
+}
+
+#message {
+  display:none;
+  background: #c6c6c6;
+  color: #000;
+  position: relative;
+  padding: 20px;
+  margin-top: 10px;
+}
+
+#message p {
+  padding: 10px 35px;
+  font-size: 18px;
+}
+
+.valid {
+  color: rgb(0, 255, 21);
+}
+
+.valid:before {
+  position: relative;
+  left: -35px;
+  content: "Верно";
+}
+
+.invalid {
+  color: red;
+}
+
+.invalid:before {
+  position: relative;
+  left: -35px;
+  content: "Неверно";
+}
+
+/*редактор*/
+
+.gyr{
+  background-color: grey;
+  border-radius: 5px;
+  width: 130px;
+}
+
+.far{
+  width: 20px;
+  background-color: rgb(255, 255, 255);
+}
+
+.far2{
+  width: 10px;
+  font-size: 10px;
+  background-color: rgb(255, 255, 255);
+}
+
+.вон{
+  background-color: grey;
+  border-radius: 5px;
+  width: 130px;
+}
+
+.сыр{
+  width: 20px;
+  background-color: rgb(255, 255, 255);
+}
+
+.сыр2{
+  width: 10px;
+  font-size: 10px;
+  background-color: rgb(255, 255, 255);
+}
+
+/*список*/
+
+.fade{
+  margin: 0;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.fase{
+   width: 240px;
+   height: 120px;
+   position: relative;
+   left: 600px;
+   top: 10px;
+   background-color: #c6c6c6;
+   color: #1b1b1b;
+   display: block;
+   margin-top: 50px;
+   font-size: 18px;
+}
+
+.syc{
+  display: block;
+  flex: none;
+}
+
+/*переходник*/
+
+.выбор{
+  width: 450px;
+  height: 90px;
+  background-color: #c6c6c6;
+  color: #1b1b1b;
+  font-size: 18px;
+  border: none;
+  position: relative;
+  top: 10px;
+  left: 40px;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+td, th {
+  border: 1px solid black;
+  padding: 8px;
+}
